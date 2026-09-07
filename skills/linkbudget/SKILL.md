@@ -5,6 +5,9 @@ description: Use the public Rust linkbudget crate for end-to-end satellite or te
 
 # Link Budget
 
+For uncertain receiver or link parameters and probabilistic margin, use
+[rf-monte-carlo](../rf-monte-carlo/SKILL.md) and its receiver/link reference.
+
 Use `LinkBudget` with `Transmitter`, `PathLoss`, and `Receiver` when the whole
 link must close. Use a focused module directly when the task asks for one
 formula. Add the crate with `cargo add linkbudget`.

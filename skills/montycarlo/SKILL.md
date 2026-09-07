@@ -5,6 +5,10 @@ description: Use the public Rust montycarlo crate to run sequential or parallel 
 
 # Monty Carlo
 
+For RF tolerance, yield, or margin studies, use
+[rf-monte-carlo](../rf-monte-carlo/SKILL.md) for the sampling assumptions and
+domain integration. This skill describes the execution and statistics layer.
+
 Use `montycarlo` as a small execution and statistics layer. Keep probability
 distributions and domain constraints in the caller's `Simulation`
 implementation. Add the crate with `cargo add montycarlo`.
