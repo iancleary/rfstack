@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "updated": "2026-02-07",
+  "base_path": "/blocks",
+  "icons": [
+    {
+      "id": "lna",
+      "path": "amplifiers/LNA.svg",
+      "label": "LNA",
+      "aliases": ["LNA.svg"]
+    },
+    {
+      "id": "pa",
+      "path": "amplifiers/PA.svg",
+      "label": "PA",
+      "aliases": ["PA.svg"]
+    },
+    {
+      "id": "vga",
+      "path": "amplifiers/VGA.svg",
+      "label": "VGA",
+      "aliases": ["VGA.svg"]
+    },
+    {
+      "id": "vga-2",
+      "path": "amplifiers/VGA2.svg",
+      "label": "VGA 2",
+      "aliases": ["VGA2.svg"]
+    },
+    {
+      "id": "amplifier",
+      "path": "amplifiers/amplifier.svg",
+      "label": "Amplifier",
+      "aliases": ["amplifier.svg"]
+    },
+    {
+      "id": "attenuator",
+      "path": "attenuators/Attenuator.svg",
+      "label": "Attenuator",
+      "aliases": ["Attenuator.svg"]
+    },
+    {
+      "id": "attenuator-1db",
+      "path": "attenuators/Attenuator1dB.svg",
+      "label": "Attenuator 1 dB",
+      "aliases": ["Attenuator1dB.svg"]
+    },
+    {
+      "id": "attenuator-2db",
+      "path": "attenuators/Attenuator2dB.svg",
+      "label": "Attenuator 2 dB",
+      "aliases": ["Attenuator2dB.svg"]
+    },
+    {
+      "id": "attenuator-3db",
+      "path": "attenuators/Attenuator3dB.svg",
+      "label": "Attenuator 3 dB",
+      "aliases": ["Attenuator3dB.svg"]
+    },
+    {
+      "id": "attenuator-4db",
+      "path": "attenuators/Attenuator4dB.svg",
+      "label": "Attenuator 4 dB",
+      "aliases": ["Attenuator4dB.svg"]
+    },
+    {
+      "id": "attenuator-5db",
+      "path": "attenuators/Attenuator5dB.svg",
+      "label": "Attenuator 5 dB",
+      "aliases": ["Attenuator5dB.svg"]
+    },
+    {
+      "id": "attenuator-6db",
+      "path": "attenuators/Attenuator6dB.svg",
+      "label": "Attenuator 6 dB",
+      "aliases": ["Attenuator6dB.svg"]
+    },
+    {
+      "id": "attenuator-7db",
+      "path": "attenuators/Attenuator7dB.svg",
+      "label": "Attenuator 7 dB",
+      "aliases": ["Attenuator7dB.svg"]
+    },
+    {
+      "id": "attenuator-8db",
+      "path": "attenuators/Attenuator8dB.svg",
+      "label": "Attenuator 8 dB",
+      "aliases": ["Attenuator8dB.svg"]
+    },
+    {
+      "id": "attenuator-9db",
+      "path": "attenuators/Attenuator9dB.svg",
+      "label": "Attenuator 9 dB",
+      "aliases": ["Attenuator9dB.svg"]
+    },
+    {
+      "id": "attenuator-10db",
+      "path": "attenuators/Attenuator10dB.svg",
+      "label": "Attenuator 10 dB",
+      "aliases": ["Attenuator10dB.svg"]
+    },
+    {
+      "id": "attenuator-11db",
+      "path": "attenuators/Attenuator11dB.svg",
+      "label": "Attenuator 11 dB",
+      "aliases": ["Attenuator11dB.svg"]
+    },
+    {
+      "id": "attenuator-12db",
+      "path": "attenuators/Attenuator12dB.svg",
+      "label": "Attenuator 12 dB",
+      "aliases": ["Attenuator12dB.svg"]
+    },
+    {
+      "id": "attenuator-13db",
+      "path": "attenuators/Attenuator13dB.svg",
+      "label": "Attenuator 13 dB",
+      "aliases": ["Attenuator13dB.svg"]
+    },
+    {
+      "id": "attenuator-14db",
+      "path": "attenuators/Attenuator14dB.svg",
+      "label": "Attenuator 14 dB",
+      "aliases": ["Attenuator14dB.svg"]
+    },
+    {
+      "id": "attenuator-15db",
+      "path": "attenuators/Attenuator15dB.svg",
+      "label": "Attenuator 15 dB",
+      "aliases": ["Attenuator15dB.svg"]
+    },
+    {
+      "id": "attenuator-16db",
+      "path": "attenuators/Attenuator16dB.svg",
+      "label": "Attenuator 16 dB",
+      "aliases": ["Attenuator16dB.svg"]
+    },
+    {
+      "id": "attenuator-17db",
+      "path": "attenuators/Attenuator17dB.svg",
+      "label": "Attenuator 17 dB",
+      "aliases": ["Attenuator17dB.svg"]
+    },
+    {
+      "id": "attenuator-18db",
+      "path": "attenuators/Attenuator18dB.svg",
+      "label": "Attenuator 18 dB",
+      "aliases": ["Attenuator18dB.svg"]
+    },
+    {
+      "id": "attenuator-19db",
+      "path": "attenuators/Attenuator19dB.svg",
+      "label": "Attenuator 19 dB",
+      "aliases": ["Attenuator19dB.svg"]
+    },
+    {
+      "id": "attenuator-20db",
+      "path": "attenuators/Attenuator20dB.svg",
+      "label": "Attenuator 20 dB",
+      "aliases": ["Attenuator20dB.svg"]
+    },
+    {
+      "id": "step-attenuator",
+      "path": "attenuators/StepAttenuator.svg",
+      "label": "Step Attenuator",
+      "aliases": ["StepAttenuator.svg"]
+    },
+    {
+      "id": "variable-attenuator",
+      "path": "attenuators/VariableAttenuator.svg",
+      "label": "Variable Attenuator",
+      "aliases": ["VariableAttenuator.svg"]
+    },
+    {
+      "id": "combiner",
+      "path": "combiners/Combiner.svg",
+      "label": "Combiner",
+      "aliases": ["Combiner.svg"]
+    },
+    {
+      "id": "power-combiner",
+      "path": "combiners/PowerCombiner.svg",
+      "label": "Power Combiner",
+      "aliases": ["PowerCombiner.svg"]
+    },
+    {
+      "id": "directional-coupler",
+      "path": "couplers/DirectionalCoupler.svg",
+      "label": "Directional Coupler",
+      "aliases": ["DirectionalCoupler.svg"]
+    },
+    {
+      "id": "bandpass-filter",
+      "path": "filters/BandpassFilter.svg",
+      "label": "Bandpass Filter",
+      "aliases": ["BandpassFilter.svg"]
+    },
+    {
+      "id": "bandstop-filter",
+      "path": "filters/BandstopFilter.svg",
+      "label": "Bandstop Filter",
+      "aliases": ["BandstopFilter.svg"]
+    },
+    {
+      "id": "high-pass-filter",
+      "path": "filters/HighPassFilter.svg",
+      "label": "High Pass Filter",
+      "aliases": ["HighPassFilter.svg"]
+    },
+    {
+      "id": "low-pass-filter",
+      "path": "filters/LowPassFilter.svg",
+      "label": "Low Pass Filter",
+      "aliases": ["LowPassFilter.svg"]
+    },
+    {
+      "id": "generic-block",
+      "path": "generic/block.svg",
+      "label": "Generic Block",
+      "aliases": ["block.svg"]
+    },
+    {
+      "id": "mixer",
+      "path": "mixers/mixer.svg",
+      "label": "Mixer",
+      "aliases": ["mixer.svg"]
+    },
+    {
+      "id": "delay-line",
+      "path": "phase/DelayLine.svg",
+      "label": "Delay Line",
+      "aliases": ["DelayLine.svg"]
+    },
+    {
+      "id": "phase-shifter-iec",
+      "path": "phase/PhaseShifterIEC.svg",
+      "label": "Phase Shifter IEC",
+      "aliases": ["PhaseShifterIEC.svg"]
+    },
+    {
+      "id": "power-divider",
+      "path": "splitters/PowerDivider.svg",
+      "label": "Power Divider",
+      "aliases": ["PowerDivider.svg"]
+    },
+    {
+      "id": "splitter",
+      "path": "splitters/Splitter.svg",
+      "label": "Splitter",
+      "aliases": ["Splitter.svg"]
+    },
+    {
+      "id": "sp3t",
+      "path": "switches/SP3T.svg",
+      "label": "SP3T",
+      "aliases": ["SP3T.svg"]
+    },
+    {
+      "id": "sp4t",
+      "path": "switches/SP4T.svg",
+      "label": "SP4T",
+      "aliases": ["SP4T.svg"]
+    },
+    {
+      "id": "spdt",
+      "path": "switches/SPDT.svg",
+      "label": "SPDT",
+      "aliases": ["SPDT.svg"]
+    }
+  ]
+}

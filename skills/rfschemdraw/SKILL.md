@@ -48,6 +48,17 @@ State unknown values as `TBD`; do not invent electrical performance.
 - Treat the diagram as a functional block diagram, not proof of electrical
   correctness.
 
+## RF block asset library
+
+`assets/blocks/` contains the RF block SVG library copied from `rfsystems`.
+Keep its category paths and `manifest.json` intact so asset IDs continue to map
+to the same symbols. Use it as the visual vocabulary for RF documents and UI
+mockups. Do not use a similarly named symbol for a different RF function.
+
+The library includes amplifiers, attenuators, filters, mixers, switches,
+splitters, combiners, couplers, phase blocks, endpoints, and a generic block.
+Use the generic block only when no specific symbol exists.
+
 ## Workflow
 
 1. Start from `examples/rf_chain.py`.
