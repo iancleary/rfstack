@@ -1,4 +1,5 @@
 [release]
+runner_protocol = "prepared-v1"
 name = "rfstack"
 version_source = "VERSION"
 runner = [
@@ -7,7 +8,6 @@ runner = [
   "--version-file", "VERSION",
   "--tag-prefix", "v",
   "--branch", "main",
-  "--check", "./scripts/check.sh",
 ]
 dry_run_args = ["--dry-run"]
 current_version_command = [
@@ -20,3 +20,8 @@ publish = true
 commands = [
   ["./scripts/check.sh"],
 ]
+
+[runner_source]
+repository = "https://github.com/iancleary/release-skills"
+revision = "9132f4895385bc469b389a5c3686aa8cad69ab53"
+sha256 = "fbda2341449e776e6c0b15f70492ddaed34614a43c4598acc408ab4026dc096f"

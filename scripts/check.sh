@@ -40,16 +40,28 @@ if release.get("name") != "rfstack":
     raise SystemExit("release.name must be rfstack")
 if release.get("version_source") != "VERSION":
     raise SystemExit("release.version_source must be VERSION")
+if release.get("runner_protocol") != "prepared-v1":
+    raise SystemExit("release.runner_protocol must be prepared-v1")
 if release.get("runner", [])[:4] != [
     "uv", "run", "scripts/release.py", "version-file-release"
 ]:
     raise SystemExit("release.runner must use the checked-in version-file runner")
+if "--check" in release.get("runner", []):
+    raise SystemExit("checks must be declared once in [checks].commands")
 if release.get("dry_run_args") != ["--dry-run"]:
     raise SystemExit("release.dry_run_args must enable the runner dry-run")
 if release.get("publish") is not True:
     raise SystemExit("release.publish must be true")
 if config.get("checks", {}).get("commands") != [["./scripts/check.sh"]]:
     raise SystemExit("release checks must use ./scripts/check.sh")
+
+source = config.get("runner_source", {})
+if source.get("repository") != "https://github.com/iancleary/release-skills":
+    raise SystemExit("runner_source.repository must identify release-skills")
+if not re.fullmatch(r"[0-9a-f]{40}", source.get("revision", "")):
+    raise SystemExit("runner_source.revision must be a full Git commit")
+if not re.fullmatch(r"[0-9a-f]{64}", source.get("sha256", "")):
+    raise SystemExit("runner_source.sha256 must be a SHA-256 digest")
 
 compile((root / "scripts/release.py").read_text(), "scripts/release.py", "exec")
 compile((root / "scripts/validate_skill.py").read_text(), "scripts/validate_skill.py", "exec")
