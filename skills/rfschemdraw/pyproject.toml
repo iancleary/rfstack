@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rfschemdraw"
+version = "0.1.0"
+description = "Schemdraw elements for RF signal-chain block diagrams"
+requires-python = ">=3.9"
+dependencies = [
+  "schemdraw>=0.23,<0.24",
+]
+
+[project.scripts]
+rfschemdraw = "rfschemdraw.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rfschemdraw"]
