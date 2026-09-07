@@ -51,9 +51,13 @@ State unknown values as `TBD`; do not invent electrical performance.
 ## RF block asset library
 
 `assets/blocks/` contains the RF block SVG library copied from `rfsystems`.
-Keep its category paths and `manifest.json` intact so asset IDs continue to map
-to the same symbols. Use it as the visual vocabulary for RF documents and UI
-mockups. Do not use a similarly named symbol for a different RF function.
+The local `rfschemdraw` Python package registers every SVG as an `RFBlock`
+Schemdraw element with `W`, `E`, `N`, `S`, `center`, `start`, and `end` anchors.
+Use these elements in diagrams instead of treating the SVGs as loose images.
+
+Keep the category paths and `manifest.json` intact so asset IDs continue to map
+to the same symbols. `input` and `output` are registered from their SVG paths
+because the upstream manifest does not list them.
 
 The library includes amplifiers, attenuators, filters, mixers, switches,
 splitters, combiners, couplers, phase blocks, endpoints, and a generic block.
@@ -61,17 +65,26 @@ Use the generic block only when no specific symbol exists.
 
 ## Workflow
 
-1. Start from `examples/rf_chain.py`.
+1. Start from `examples/rf_chain.py` and import `RFBlock` from `rfschemdraw`.
 2. Keep the source beside its consumer, usually under `docs/diagrams/`.
 3. Export SVG by default. Commit the Python source and SVG together when the
    SVG is published or reviewed.
 4. Render with a project-managed environment. A simple local invocation is:
 
    ```sh
-   uv run --with schemdraw python docs/diagrams/<name>.py
+   uv run --project <path-to-skill>/skills/rfschemdraw \
+     python docs/diagrams/<name>.py
    ```
 
-5. Inspect the rendered SVG. Verify stage order, arrow direction, labels, and
+5. List or preview the integrated RF symbols when needed:
+
+   ```sh
+   uv run --project <path-to-skill>/skills/rfschemdraw rfschemdraw list
+   uv run --project <path-to-skill>/skills/rfschemdraw \
+     rfschemdraw gallery /tmp/rf-block-gallery.svg
+   ```
+
+6. Inspect the rendered SVG. Verify stage order, arrow direction, labels, and
    legibility at the document's normal display size.
 
 ## Output contract

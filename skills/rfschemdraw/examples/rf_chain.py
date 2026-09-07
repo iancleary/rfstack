@@ -1,34 +1,27 @@
-"""Minimal receive-chain block diagram. Render with `uv run --with schemdraw python rf_chain.py`."""
+"""Minimal receive-chain block diagram using the bundled RF symbols."""
 
 import schemdraw
 import schemdraw.elements as elm
-from schemdraw import flow
+
+from rfschemdraw import RFBlock
 
 
 def build():
     schemdraw.use("svg")
-    drawing = schemdraw.Drawing()
-    drawing.config(fontsize=11)
+    drawing = schemdraw.Drawing(show=False)
+    drawing.config(fontsize=8)
 
     with drawing:
-        antenna = flow.Box(w=2.0, h=1.0).label("Antenna\n50 Ω")
-        preselector = flow.Box(w=2.2, h=1.0).right().label("Preselector\nTBD band")
-        lna = flow.Box(w=1.8, h=1.0).right().label("LNA\nGain TBD")
-        mixer = flow.Box(w=1.8, h=1.0).right().label("Mixer\nRF → IF")
-        if_filter = flow.Box(w=2.0, h=1.0).right().label("IF Filter\nTBD BW")
-        adc = flow.Box(w=1.8, h=1.0).right().label("ADC\nFs TBD")
-
-        for start, end in (
-            (antenna, preselector),
-            (preselector, lna),
-            (lna, mixer),
-            (mixer, if_filter),
-            (if_filter, adc),
+        for block_id, label in (
+            ("input", "Antenna\n50 Ω"),
+            ("bandpass-filter", "Preselector\nTBD band"),
+            ("lna", "LNA\nGain TBD"),
+            ("mixer", "Mixer\nRF → IF"),
+            ("bandpass-filter", "IF Filter\nTBD BW"),
+            ("output", "ADC\nFs TBD"),
         ):
-            elm.Line(arrow="->").at(start.E).to(end.W)
-
-        lo = flow.Box(w=1.8, h=0.9).down().at(mixer.S).label("LO\nTBD GHz")
-        elm.Line(arrow="->").at(lo.N).to(mixer.S).label("LO", loc="right")
+            drawing.add(RFBlock(block_id).label(label, loc="bottom"))
+            drawing.add(elm.Line(arrow="->").right().length(0.9))
 
     return drawing
 
