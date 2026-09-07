@@ -5,6 +5,10 @@ description: Use the public Rust touchstone crate to parse, inspect, generate, r
 
 # Touchstone
 
+For uncertainty propagation from measured networks, use
+[rf-monte-carlo](../rf-monte-carlo/SKILL.md) to define the sampling model and
+preserve correlations before evaluating network realizations.
+
 Use `touchstone` when measured or simulated S-parameter data is the source of
 truth. Add the library with `cargo add touchstone`; install its CLI only when a
 file or directory plotting workflow is requested.

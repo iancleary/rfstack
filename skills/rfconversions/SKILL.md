@@ -5,6 +5,10 @@ description: Use the public Rust rfconversions crate for scalar RF unit conversi
 
 # RF Conversions
 
+For RF uncertainty propagation, use
+[rf-monte-carlo](../rf-monte-carlo/SKILL.md). Keep these scalar conversions
+inside the deterministic trial evaluator.
+
 Use `rfconversions` instead of rewriting common scalar RF equations. Add it with
 `cargo add rfconversions`, then import the smallest module that owns the math.
 

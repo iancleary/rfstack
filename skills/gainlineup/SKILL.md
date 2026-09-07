@@ -5,6 +5,9 @@ description: Use the public Rust gainlineup crate to model ordered RF hardware c
 
 # Gain Lineup
 
+For tolerance, yield, or probabilistic margin analysis, use
+[rf-monte-carlo](../rf-monte-carlo/SKILL.md) and its hardware cascade reference.
+
 Model an RF chain as one `Input` followed by ordered `Block` values. Add the
 crate with `cargo add gainlineup`.
 
