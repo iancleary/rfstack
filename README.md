@@ -2,6 +2,10 @@
 
 Codex skills for RF engineering workflows.
 
+The repository uses a checked-in release process. See
+[`docs/release.md`](docs/release.md) for version policy, validation, dry-run,
+and publishing commands.
+
 - `gainlineup`: Model ordered RF hardware chains and cascaded performance.
 - `linkbudget`: Analyze end-to-end terrestrial and satellite radio links.
 - `montycarlo`: Run domain-specific Monte Carlo simulations in Rust.
